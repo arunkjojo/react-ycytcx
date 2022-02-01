@@ -1,4 +1,4 @@
-import React from 'react'; // , { useState, useEffect }
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Container from '@material-ui/core/Container';
@@ -8,18 +8,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increase_count, decrease_count } from '../Redux/count/countSlice';
 export default function Counter(props) {
   const id = props.id;
-  // const [counter, setCounter] = useState(0);
   const count = useSelector((state) => {
     return state.count.cartItems;
   });
   const itemQty = count.filter((item) => {
     return item.id == id;
   })[0];
-  // useEffect(() => {
   const countValue = itemQty ? itemQty.qty : 0;
-  //   setCounter(countValue);
-  // });
-
   const dispatch = useDispatch();
   const increaseCount = () => {
     dispatch(

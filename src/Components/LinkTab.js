@@ -7,7 +7,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export const LinkTab = (props) => {
   const data = props.links;
   const [value, setValue] = useState(0);
-  // console.log(value);
   if (data) {
     return (
       <div className="linkDiv" style={{ paddingTop: '35px' }}>

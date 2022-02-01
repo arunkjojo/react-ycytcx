@@ -2,12 +2,10 @@ import React from 'react';
 import Counter from './Counter';
 export const DishInfo = (props) => {
   const data = props.data;
-  // console.log(data);
   return (
     <>
       <div className="foodContainer" key={data.dish_id}>
         <div className="typeInfo">
-          {/* <h2> */}
           {data.dish_Type === 2 ? (
             <div className="foodType green">
               <span className="foodTypeCir" />
@@ -17,7 +15,6 @@ export const DishInfo = (props) => {
               <span className="foodTypeCir" />
             </div>
           )}
-          {/* </h2> */}
         </div>
         <div className="productInfo">
           <h3>{data.dish_name}</h3>
