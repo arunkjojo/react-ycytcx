@@ -17,7 +17,7 @@ export const LinkTab = (props) => {
             indicatorColor="secondary"
             textColor="secondary"
             variant="scrollable"
-            // scrollButtons="auto"
+            scrollButtons="auto"
           >
             {data.map((name) => (
               <Tab key={name.menu_category_id} label={name.menu_category} />
