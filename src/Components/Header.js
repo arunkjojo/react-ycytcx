@@ -7,9 +7,7 @@ export const Header = (props) => {
   if (props.data) {
     return (
       <div className="headerItem">
-        <h4 className="item">
-          {props.data}
-        </h4>
+        <h5 className="item">{props.data}</h5>
         <h5 className="item">
           My Order
           <Badge color="secondary" badgeContent={count}>

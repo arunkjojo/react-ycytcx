@@ -20,7 +20,7 @@ export default function Counter(props) {
     dispatch(
       increase_count({
         count: count + 1,
-        cartId:id,
+        cartId: id,
       })
     );
   };
@@ -29,7 +29,7 @@ export default function Counter(props) {
       dispatch(
         decrease_count({
           count: count - 1,
-          cartId:id,
+          cartId: id,
         })
       );
     }
@@ -40,13 +40,26 @@ export default function Counter(props) {
     >
       <ButtonGroup
         className="counterButtonGroup"
-        style={{ borderRadius: '25px', border: '0px solid ' }}
+        style={{ borderRadius: '25px', border: '0.5px solid' }}
       >
-        <Button className="counterButton" onClick={decreaseCount}>
+        <Button
+          style={{ border: '0px' }}
+          className="counterButton"
+          onClick={decreaseCount}
+        >
           <RemoveIcon fontSize="small" />
         </Button>
-        <Button className="counterButton">{countValue}</Button>
-        <Button className="counterButton" onClick={increaseCount}>
+        <Button
+          style={{ borderLeft: '0.5px solid', borderRight: '0.5px solid' }}
+          className="counterButton"
+        >
+          {countValue}
+        </Button>
+        <Button
+          style={{ border: '0px' }}
+          className="counterButton"
+          onClick={increaseCount}
+        >
           <AddIcon fontSize="small" />
         </Button>
       </ButtonGroup>

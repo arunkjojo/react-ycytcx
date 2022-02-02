@@ -9,14 +9,15 @@ export const LinkTab = (props) => {
   const [value, setValue] = useState(0);
   if (data) {
     return (
-      <div className="linkDiv" style={{ paddingTop: '35px' }}>
+      <div className="linkDiv">
         <Paper>
           <Tabs
             value={value}
             onChange={(e, v) => setValue(v)}
-            fullWidth
             indicatorColor="secondary"
             textColor="secondary"
+            variant="scrollable"
+            // scrollButtons="auto"
           >
             {data.map((name) => (
               <Tab key={name.menu_category_id} label={name.menu_category} />
